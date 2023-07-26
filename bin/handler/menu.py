@@ -51,7 +51,7 @@ class MenuEdit(BuildHandler):
 class MenuCreate(BuildHandler):
 
     _check_fields = [
-        F('fish_pool_id', T_INT, True),
+        F('pool_id', T_INT, True),
         F('duration', T_INT, True),
         F('pledge', T_INT, True),
         F('price', T_INT, True),
