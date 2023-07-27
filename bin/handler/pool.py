@@ -34,6 +34,9 @@ class PoolList(BuildHandler):
 class PoolCreate(BuildHandler):
 
     _check_fields = [
+        F('image_url', T_STR, True),
+        F('repuchase', T_INT, True),
+        F('vip_repuchase', T_INT, True),
         F('name', T_STR, True),
         F('description', T_STR, default=''),
     ]
@@ -49,8 +52,11 @@ class PoolEdit(BuildHandler):
 
     _check_fields = [
         F('pool_id', T_INT, True),
+        F('image_url', T_STR, True),
+        F('repuchase', T_INT, True),
+        F('vip_repuchase', T_INT, True),
         F('name', T_STR, True),
-        F('description', T_STR, True),
+        F('description', T_STR, default=''),
     ]
 
     @check('must')
